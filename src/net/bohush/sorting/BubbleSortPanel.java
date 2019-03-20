@@ -30,9 +30,9 @@ public class BubbleSortPanel extends SortPanel {
 					Thread.sleep(4 * sleepTime);
 					if (list[i] > list[i + 1]) {
 						redColumn = i + 1;
-						int temp = list[i];
-						list[i] = list[i + 1];
-						list[i + 1] = temp;
+						list[i] = list[i] + list[i + 1];
+						list[i+1] = list[i] - list[i + 1];
+						list[i] = list[i] - list[i + 1];
 						repaint();
 						Thread.sleep(4 * sleepTime);
 						needNextPass = true;
